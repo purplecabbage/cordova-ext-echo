@@ -1,0 +1,1 @@
+console.log("cordova-ext-echo.js says hello");
