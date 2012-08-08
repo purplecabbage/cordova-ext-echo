@@ -1,0 +1,27 @@
+{
+  "author": "Jesse MacFadyen <purplecabbage@gmail.com>",
+  "name": "cordova-ext-barcodescanner",
+  "description": "Barcode scanner plugin for use in Apache Cordova",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "cordova-ext-echo.js",
+  "engines": {
+    "node": ">=0.6.7"
+  },
+  "dependencies": {
+     "pluginstall":">=0.3.6"
+  },
+  "devDependencies": {
+  },
+  "bin" : { "cordova-ext-echo" : "./cli.js" },
+  "scripts": {
+
+  },
+  files:[
+		"./assets/"
+  ]
+
+}
