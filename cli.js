@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-var pluginstall = require('pluginstall');
+var pluginstall = require('pluginstall'),
+    package = require('./package');
 
 var args = process.argv.slice();
 var firstArgIndex = 0;
@@ -19,7 +20,7 @@ if (args.length == firstArgIndex) {
     console.log('Usage: cordova-ext-barcodescanner [platform] [project directory]');
 } 
 else if (args[firstArgIndex] === '-v') {
-    console.log('pluginstall version ' + require('./package').version);
+    console.log('cordova-ext-echo version ' + package.version);
 } 
 else 
 {
@@ -29,9 +30,11 @@ else
     console.log("platform = " + platform);
     console.log("projectDir = " + projectDir);
 
+    console.log('cordova-ext-echo version ' + package.version);
+    console.log("Files = " + package.files);
+
     // console.log("platform = " + platform);
     // console.log("projectDir = " + projectDir);
-
     // config = pluginstall.init(platform, projectDir);
     // plugin = pluginstall.parseXml(config);
     // 
@@ -42,4 +45,6 @@ else
     //         console.log('plugin installed for platform::' + platform);
     //     }
     // });
+    
+    
 }

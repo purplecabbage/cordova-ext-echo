@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.phonegap.plugins.echo"
+    version="0.0.1">
+
+    <name>cordova-ext-echo</name>
+
+    <asset src="www/echo.js" target="echo.js" />
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/plugins.xml" parent="/plugins">
+            <plugin name="Echo"
+                value="com.phonegap.plugins.Echo"/>
+        </config-file>
+        <source-file src="./android/Echo.java"
+                target-dir="src/com/phonegap/plugins" />
+    </platform>
+
+</plugin>
