@@ -15,15 +15,9 @@
      "pluginstall":">=0.3.6"
   },
   "devDependencies": {
+    "cordova":"2.0.0"
   },
   "bin" : { 
-		"cordova-ext-echo" : "./cli.js" 
-	},
-  "scripts": {
-
-  },
-	"files": [
-		"./src/"
-	]
-
+    "cordova-ext-echo": "./bin/cli.js"
+  }
 }
