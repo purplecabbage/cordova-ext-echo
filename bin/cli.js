@@ -27,7 +27,7 @@
         var platform = args[firstArgIndex];
         var projectDir = args[firstArgIndex+1];
         var pkgPath = require.resolve(pkg.name); // find yourself little one!
-        var extSrcDir = path.join(path.dirname(pkgPath), "src");
+        var extSrcDir = path.dirname(pkgPath);
         var config = pluginstall.init(platform, projectDir, extSrcDir);
         var plugin = pluginstall.parseXml(config);
 
