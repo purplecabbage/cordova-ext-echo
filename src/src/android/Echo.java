@@ -1,4 +1,4 @@
-package org.apache.cordova.plugin;
+package org.apache.cordova.plugins;
 
 import org.apache.cordova.api.Plugin;
 import org.apache.cordova.api.PluginResult;

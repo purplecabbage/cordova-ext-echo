@@ -2,7 +2,6 @@
 
 (function(){
     
-    
     var pluginstall = require('pluginstall');
     var pkg = require('../package');
     var fs = require('fs');
@@ -15,31 +14,20 @@
         firstArgIndex++;
     }
 
-    //args.shift() // skip "cli.js"
     firstArgIndex++;
 
-    //console.log("args.length = " + args.length + " : " + firstArgIndex + " " + args);
-
     if (args.length == firstArgIndex) {
-        console.log('Usage: cordova-ext-echo [platform] [project directory]');
+        console.log('Usage: ' + pkg.name + ' [platform] [project directory]');
     } 
     else if (args[firstArgIndex] === '-v') {
-        console.log('cordova-ext-echo version ' + pkg.version);
+        console.log(pkg.name + ' version ' + pkg.version);
     } 
     else {
     
         var platform = args[firstArgIndex];
         var projectDir = args[firstArgIndex+1];
-    
-    //    console.log("platform = " + platform);
-    //    console.log("projectDir = " + projectDir);
-    //    console.log('cordova-ext-echo version ' + pkg.version);
-    
         var pkgPath = require.resolve(pkg.name); // find yourself little one!
         var extSrcDir = path.join(path.dirname(pkgPath), "src");
-    
-    //    console.log("extSrcDir = " + extSrcDir);
-    
         var config = pluginstall.init(platform, projectDir, extSrcDir);
         var plugin = pluginstall.parseXml(config);
 
