@@ -19,4 +19,13 @@
                 target-dir="src/org/apache/cordova/plugins" />
     </platform>
 
+    <!-- ios -->
+    <platform name="ios">
+        <plugins-plist key="Echo"
+                    string="Echo" />
+
+        <header-file src="Echo.h" />
+
+        <source-file src="Echo.m" />
+    </platform> 
 </plugin>
