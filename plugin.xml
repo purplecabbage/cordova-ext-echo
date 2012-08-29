@@ -11,7 +11,7 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/cordova/plugins">
-            <plugin name="Echo"
+            <plugin name="EchoPlugin"
                 value="org.apache.cordova.plugins.Echo"/>
         </config-file>
        
@@ -21,7 +21,7 @@
 
     <!-- ios -->
     <platform name="ios">
-        <plugins-plist key="Echo"
+        <plugins-plist key="EchoPlugin"
                     string="Echo" />
 
         <header-file src="Echo.h" />
