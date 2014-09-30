@@ -10,7 +10,7 @@
 
     <!-- android -->
     <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/cordova/plugins">
+        <config-file target="res/xml/config.xml" parent="/*">
             <plugin name="EchoPlugin"
                 value="org.apache.cordova.plugins.Echo"/>
         </config-file>
