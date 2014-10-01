@@ -12,7 +12,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <plugin name="Echo"
-                value="org.apache.cordova.plugins.Echo"/>
+                value="org.apache.cordova.plugins.echo"/>
         </config-file>
        
         <source-file src="src/android/Echo.java"
