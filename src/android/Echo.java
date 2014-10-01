@@ -1,7 +1,7 @@
 package org.apache.cordova.plugins;
 
-import org.apache.cordova.api.Plugin;
-import org.apache.cordova.api.PluginResult;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -9,7 +9,7 @@ import org.json.JSONObject;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class Echo extends Plugin {
+public class Echo extends CordovaPlugin {
 
     /**
      * Executes the request and returns PluginResult.
