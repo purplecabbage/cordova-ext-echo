@@ -1,7 +1,8 @@
 package org.apache.cordova.plugins;
 
-import org.apache.cordova.api.Plugin;
-import org.apache.cordova.api.PluginResult;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -9,7 +10,7 @@ import org.json.JSONObject;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class Echo extends Plugin {
+public class Echo extends CordovaPlugin {
 
     /**
      * Executes the request and returns PluginResult.
@@ -19,7 +20,7 @@ public class Echo extends Plugin {
      * @param callbackId    The callback id used when calling back into JavaScript.
      * @return              A PluginResult object with a status and message.
      */
-    public PluginResult execute(String action, JSONArray args, String callbackId) {
+    /*public PluginResult execute(String action, JSONArray args, String callbackId) {
         try {
             if (action.equals("echo")) {
                 String echo = args.getString(0); 
@@ -34,5 +35,24 @@ public class Echo extends Plugin {
         } catch (JSONException e) {
             return new PluginResult(PluginResult.Status.JSON_EXCEPTION);
         }
-    }
+    }*/
+    
+     @Override
+        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+            if (action.equals("echo")) {
+                String message = args.getString(0);
+                this.echo(message, callbackContext);
+                return true;
+            }
+            return false;
+        }
+
+        private void echo(String message, CallbackContext callbackContext) {
+            if (message != null && message.length() > 0) {
+                callbackContext.success(message);
+            } else {
+                callbackContext.error("Expected one non-empty string argument.");
+            }
+        }
+        
 }
